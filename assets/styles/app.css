@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* message d'alerte */
+
+.alert {
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeOut 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+.alert-success {
+    background-color: mediumseagreen;
+}
+
+.alert-error {
+    background-color: red;
+}
+
+/* formulaire de connection */
+
+.login {
+    width: 60%;
+    font-size: 15rem;
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: start;
+    padding-left: 3rem;
+}
+
+.login input{
+    width: 100%;
+}
+
+.logMessage{
+    font-size: 2rem;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+h1{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+h2{
+    padding-left: 5%;
+}
+
+/* fomulaire article */
+
+.articleAdd{
+    font-size: 10rem;
+    width: 80%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 2rem auto;
+}
+
+.addArticle {
+    padding-left: 5.5rem;
+}
+
+#lastArticles {
+    width: 70%;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    line-height: 5rem;
+}
+
+#lastArticles a {
+    width: 25%;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.article {
+    width: 80%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px 5px #000000;
+    padding-left: 5%;
+    margin: 2rem auto;
+    font-size: 5rem;
+}
+
+.articles {
+    width: 80%;
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin: 2rem auto;
+    font-size: 5rem;
+}
+
+.article span {
+    width: 90%;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: right;
+}
+
+
+#allArticles {
+    width: 90%;
+    margin: 5rem auto;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#allArticles h2 {
+    color: #B0413E;
+    padding-left: 0;
+}
+
+#separator {
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.foot {
+    width: 100%;
+    text-align: center;
+}
+
+.form-label {
+    padding-left: 15%;
+}
+
+#article_title, #article_content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.col-form-label {
+    padding-left: 15%;
+}
+
+#article_dateAdd {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#article_submit {
+    margin-left: 15%;
+}
+
+.table {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 10rem;
+}
+
+#adminDash {
+    font-size: 8rem;
+}
+
+#adminDash ul {
+    padding-left: 15%;
+}
+
+#create {
+    padding-left: 15%;
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Home !{% endblock %}
+
+{% block body %}
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="logMessage">
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.name }} <a href="{{ path('app_logout') }}">Logout</a>
+                {% if 'ROLE_ADMIN' in app.user.roles %}
+                <a class="navbar ms-auto" href="{{ path('admin') }}">Menu Admin</a>
+                {% endif %}
+            </div>
+            {% else %}
+            <div class="mb-3">
+                please login -><a href="{{ path('app_login') }}">Login</a> :
+                S'enregistrer -><a href="{{ path('app_register') }}">Sign it</a>
+            </div>
+        {% endif %}
+    </div>
+
+   <h1>Bienvenue sur le blog !</h1>
+
+    <h2>les derniers articles</h2>
+    {% if app.user %}
+    <a class='addArticle' href="{{ path('article_add') }}">Ajoutez un article</a>
+    {% endif %}
+    <a class='addArticle' href="{{ path('article_viewAll') }}">Voir tout les articles</a>
+    <div id="lastArticles">
+        {% for article in articles %}
+                <a href="{{ path('article_view', {id: article.id}) }}">-- {{ article.title }} --</a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajoutez un nouvel article{% endblock %}
+
+{% block body %}
+    <div class="articleAdd">
+        {{ form(form) }}
+    </div>
+    <div class="foot">
+        <span id="separator">--------------------</span><br>
+        <a href="{{ path('app_home') }}">Retour a l'accueil</a>
+    </div>
+
+{% endblock %}
